@@ -62,7 +62,7 @@ class App extends React.Component {
       counter = setTimeout(() => {
         
         if (!value) {
-          this.fetchAll()
+          this.fetchAllCountries()
         }
 
         if (value) {
@@ -94,8 +94,7 @@ class App extends React.Component {
       .then(data => {
         //updating state of apiResponses
         this.setState({
-          response: data,
-          loading: false,
+          response: data
         })
       })
       .catch(error => console.log(error))
