@@ -1,7 +1,9 @@
 import React from 'react'
 import Dashboard from './Components/Dashboard'
 import Header from './Components/Header'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import Error from './Components/Error'
+import CountryDetails from './Components/CountryDetails'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -47,7 +49,7 @@ class App extends React.Component {
         })
       }
       if (name === "filter") {
-        url = `https://restcountries.com/v3.1/region/${value}`
+        url = `https://restcountries.com/v2/region/${value}`
         this.setState({
           search: "",
         })
@@ -103,10 +105,30 @@ class App extends React.Component {
   render() {
 
     return (
-        <div className='App'>
-            <Header data={this.state} filterCountries={this.filterCountries}/>
-            <Dashboard data={this.state}/>
-        </div>
+      <div className='App'>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={
+              <>
+                <Header data={this.state} filterCountries={this.filterCountries}/> 
+                <Dashboard data={this.state}/>
+              </>
+            }>
+            </Route>
+
+            <Route exact path="/country/:name" element={
+              <CountryDetails data={this.state}/>
+            }></Route>
+          
+
+            <Route exact path="/*" element={
+              <Error message={"Invalid url."} />
+            }>
+              
+            </Route>
+          </Routes>
+        </Router>
+      </div>
     )
   }
 }
