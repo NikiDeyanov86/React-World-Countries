@@ -5,11 +5,11 @@ import SearchAndFilter from './SearchAndFilter';
 function Header(props) {
 
     return (
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand">React countries</a>
+        <nav className="navbar navbar-light bg-light">
+            <div className="container-fluid">
+                <a className="navbar-brand">React countries</a>
                 
-                <div class="d-flex">
+                <div className="d-flex">
                     <SearchAndFilter data={props.data} filterCountries={props.filterCountries}/>
                 </div>
             </div>

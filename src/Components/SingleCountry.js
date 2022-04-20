@@ -8,7 +8,7 @@ function SingleCountry(props) {
     return (
         <div className="country">  
             <img src={flag} alt={name} />
-            <div class="d-flex flex-column">
+            <div className="d-flex flex-column">
                 <h5>{name}</h5>
                 <p><b>Population:</b> {population}</p>
                 <p><b>Region:</b> {region}</p>

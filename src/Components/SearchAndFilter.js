@@ -11,7 +11,7 @@ function SearchAndFilter(props) {
             
         <input
             name="search"
-            class="form-control me-2"
+            className="form-control me-2"
             type="search"
             value={search}
             onChange={props.filterCountries}
@@ -20,7 +20,7 @@ function SearchAndFilter(props) {
         </input>
             
 
-        <select class="form-select" 
+        <select className="form-select" 
                 name="filter"
                 value={filter}
                 onChange={props.filterCountries}
