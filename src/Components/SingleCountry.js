@@ -15,7 +15,7 @@ function SingleCountry(props) {
                 <p><b>Region:</b> {region}</p>
                 <p><b>Capital:</b> {capital}</p>
                 <Link to={`/country/${name}`} >
-                <button type="button" class="btn btn-outline-primary" id="more_btn">
+                <button type="button" className="btn btn-outline-primary" id="more_btn">
                         <b>More</b>
                     </button>
                 </Link>    

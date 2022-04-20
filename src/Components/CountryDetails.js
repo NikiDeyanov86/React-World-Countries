@@ -27,16 +27,15 @@ function CountryDetails(props) {
 
     }, [country])
     return (
-        <div class="container-fluid country_details">
+        <div className="container-fluid country_details">
             
-                <div class="d-flex justify-content-center align-items-center flex-column">
+                <div className="d-flex justify-content-center align-items-center flex-column">
 
                     {country &&
                         country.map(item => {
                             const { flag,
                                 name,
                                 numericCode,
-                                
                                 population,
                                 currencies,
                                 region,
@@ -46,11 +45,11 @@ function CountryDetails(props) {
 
                             return (
                                 <>
-                                    <div class="d-flex justify-content-center align-items-center flex-column countryContainer" key={numericCode}>
+                                    <div className="d-flex justify-content-center align-items-center flex-column countryContainer" key={numericCode}>
                                         
                         
                                             <Link to='/'>
-                                                <button type="button" class="btn btn-primary btn-lg" id="back_btn">Back</button>
+                                                <button type="button" className="btn btn-primary btn-lg" id="back_btn">Back</button>
                                             </Link>
                                         
                                         
